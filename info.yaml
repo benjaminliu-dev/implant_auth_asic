@@ -5,10 +5,10 @@ project:
   discord:      "expomarker36"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "PRESENT Implant Authentication"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+  clock_hz:     10000000       # Clock frequency in Hz (or 0 if not applicable)
 
-  # Custom shuttle: each tile is 160x100 um; 2x2 occupies 320x200 um.
-  tiles: "2x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 3x4 or 4x4
+  # Custom shuttle: each tile is 160x100 um; 3x2 occupies 480x200 um.
+  tiles: "3x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 3x4 or 4x4
 
   # Your top module name must start with "tt_um_". Make it unique by including your github username:
   top_module:  "tt_um_implant_auth_top"

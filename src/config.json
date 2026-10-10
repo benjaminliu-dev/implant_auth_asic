@@ -50,9 +50,9 @@
   "LEFT_MARGIN_MULT": 6,
   "RIGHT_MARGIN_MULT": 6,
 
-  "//": "Custom shuttle: 2x2 tiles, each 160x100 um; keep in sync with info.yaml project.tiles",
+  "//": "Custom shuttle: 3x2 tiles, each 160x100 um; keep in sync with info.yaml project.tiles",
   "FP_SIZING": "absolute",
-  "DIE_AREA": "0 0 320 200",
+  "DIE_AREA": "0 0 320 300",
 
   "GRT_ALLOW_CONGESTION": 1,
 
@@ -73,6 +73,9 @@
   "//": "Only export pin area in LEF (without any connected nets)",
   "MAGIC_WRITE_LEF_PINONLY": 1,
 
+  "//": "Pin the local build to the same GF180 process/library as the shuttle workflow",
+  "PDK": "gf180mcuD",
+  "STD_CELL_LIBRARY": "gf180mcu_fd_sc_mcu7t5v0",
   "DESIGN_NAME": "tt_um_implant_auth_top",
   "VERILOG_FILES": "dir::*.v"
 }

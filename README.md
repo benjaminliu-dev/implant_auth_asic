@@ -4,6 +4,30 @@
 
 - [Read the documentation for project](docs/info.md)
 
+## Local physical build
+
+The target PDK is `gf180mcuD`, using `gf180mcu_fd_sc_mcu7t5v0`. The local
+configuration pins both settings to prevent OpenLane from defaulting to Sky130.
+The custom shuttle uses 160 × 100 µm tiles; the current `3x2` footprint is
+480 × 200 µm, with a 70% placement density target.
+
+From the repository root inside the OpenLane Nix shell, start a fresh GF180 run:
+
+```sh
+openlane --pdk gf180mcuD --scl gf180mcu_fd_sc_mcu7t5v0 src/config.json
+```
+
+The GF180 PDK must be installed in your PDK root. If it is missing, OpenLane's
+Volare integration can install the version required by the tool. A manual PDK
+installation instead requires `--manual-pdk --pdk-root /path/to/pdk-root`.
+
+Check the new run's `resolved.json` for `PDK: gf180mcuD` before using its layout.
+Existing Sky130 netlists, GDS files, and area estimates remain specific to Sky130;
+changing KLayout's technology selection does not convert them to GF180.
+The Tiny Tapeout generated config also supplies shuttle pin templates and voltage
+corners; use your custom shuttle's generator/settings for the final submission,
+since the standard GF180 tile dimensions differ from this custom footprint.
+
 ## What is Tiny Tapeout?
 
 Tiny Tapeout is an educational project that aims to make it easier and cheaper than ever to get your digital and analog designs manufactured on a real chip.
