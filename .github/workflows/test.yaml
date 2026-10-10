@@ -25,6 +25,7 @@ jobs:
 
       - name: Run tests
         run: |
+          python test/run_functional.py
           cd test
           make clean
           make
