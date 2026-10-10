@@ -13,7 +13,7 @@
 
   "//": "PL_TARGET_DENSITY_PCT - You can increase this if Global Placement fails with error GPL-0302.",
   "//": "Users have reported that values up to 80 worked well for them.",
-  "PL_TARGET_DENSITY_PCT": 60,
+  "PL_TARGET_DENSITY_PCT": 70,
 
   "//": "CLOCK_PERIOD - Increase this in case you are getting setup time violations.",
   "//": "The value is in nanoseconds, so 20ns == 50MHz.",
@@ -50,8 +50,9 @@
   "LEFT_MARGIN_MULT": 6,
   "RIGHT_MARGIN_MULT": 6,
 
-  "//": "Absolute die size",
+  "//": "Custom shuttle: 2x2 tiles, each 160x100 um; keep in sync with info.yaml project.tiles",
   "FP_SIZING": "absolute",
+  "DIE_AREA": "0 0 320 200",
 
   "GRT_ALLOW_CONGESTION": 1,
 
@@ -70,5 +71,8 @@
   "MAGIC_DEF_LABELS": 0,
 
   "//": "Only export pin area in LEF (without any connected nets)",
-  "MAGIC_WRITE_LEF_PINONLY": 1
+  "MAGIC_WRITE_LEF_PINONLY": 1,
+
+  "DESIGN_NAME": "tt_um_implant_auth_top",
+  "VERILOG_FILES": "dir::*.v"
 }
